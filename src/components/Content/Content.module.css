@@ -1,0 +1,10 @@
+.SectionFirst {
+    top: 0px;
+    left: -25px;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('../../assets/images/stock-photo-winters-karlskrona-november-2015-129077569.png');
+    /* background: #000000 0% 0% no-repeat padding-box; */
+    opacity: 0.31;
+}
