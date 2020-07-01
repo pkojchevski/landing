@@ -1,10 +1,10 @@
 import React from 'react'
-// import './SearchBox.module.css'
+import classes from './SearchBox.module.css'
 
 function SearchBox() {
     return (
-        <div>
-          <input></input>
+        <div className={classes.Search}>
+             <input className={classes.SearchInput} type="text" ></input>
         </div>
     )
 }
