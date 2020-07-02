@@ -6,7 +6,7 @@ import imgSecond from "../../assets/images/2.png";
 import imgThird from "../../assets/images/3.png";
 import imgQuarter from "../../assets/images/4.png";
 import CulturalImage from "../CulturalImage/CulturalImage";
-import { ReactComponent as WorldMap } from "../../assets/images/worldmap.svg";
+import WorldMap from "../../assets/images/worldmap.png";
 
 // const blogs = [{ image: '../../assets/images/stock-photo-winters-karlskrona-november-2015-129077569.png', title: '5 ways yu can help reduce over-tourism' }]
 function Content() {
@@ -23,11 +23,17 @@ function Content() {
           <ProgressBar />
         </div>
         <div className={classes.WorldMap}>
-          <WorldMap />
+
         </div>
       </section>
       <section className={classes.SectionSecond}>
-        <div className={classes.Title}></div>
+        <div style={{ margin: '2rem 0' }}>
+          <div className={classes.SectionSecondTitle}>Latest Posts</div>
+          <div className={classes.Line}></div>
+        </div>
+
+
+
         <ul className={classes.ImageList}>
           <li>
             <CulturalImage img={imgFirst} />
@@ -42,8 +48,24 @@ function Content() {
             <CulturalImage img={imgQuarter} />
           </li>
         </ul>
+        <div className={classes.SecondSectionButtonWrapper}>
+          <button className={classes.SecondSectionButton}>READ MORE</button>
+        </div>
       </section>
+
+      <section className={classes.FeaturedTopic}>
+
+      </section>
+
+
+      <section className={classes.OPRPlatform}>
+
+      </section>
+
+
+      <section className={classes.FeaturedTopic2}></section>
     </main>
+
   );
 }
 

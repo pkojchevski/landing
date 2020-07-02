@@ -9,19 +9,20 @@
 }
 
 .Timeline {
-  border-left: 6px solid #fbfbfb;
+  border-left: 4px solid #fbfbfb;
   position: absolute;
   top: 6px;
   width: 1px;
-  height: 358px;
-  left: -4.5px;
-  opacity: 0.5;
+    height: 370px;
+    left: -3px;
+    opacity: 0.5;
 }
 .Node {
   padding-left: 0.5rem;
   padding-bottom: 1.5rem;
   position: relative;
   width: 120px;
+  height:120px;
   text-align: center;
 }
 .NodeFeatured {

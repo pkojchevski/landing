@@ -7,6 +7,7 @@ function CulturalImage({ img }) {
             <img src={img}></img>
             <div className={classes.Background}></div>
         </div>
+
     )
 }
 

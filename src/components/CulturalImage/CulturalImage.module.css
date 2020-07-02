@@ -1,5 +1,4 @@
 .ImageWrapper {
-   
    background: #FFFFFF 0% 0% no-repeat padding-box;
    box-shadow: 0px 3px 6px #00000029;
    border: 1px solid #707070;
@@ -14,7 +13,7 @@
 .ImageWrapper img {
     width:10rem;
     height:10rem;
-    padding:5px;
+    padding:5px 2.5px;
 }
 
 
