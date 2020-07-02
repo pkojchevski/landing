@@ -1,12 +1,38 @@
 .Header {
-    position:absolute;
+  position: absolute;
+  color: #054d55;
+  font-size: 18px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.6rem;
+  background: rgba(255, 255, 255, 0.86);
+  z-index: 1;
+}
 
+/* .Header:after {
+  content: "";
+  width: 10rem;
+  height: 10rem;
+  background-image: url(/static/media/drop.499d5b9b.svg);
+  background-size: 10rem 10rem;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -158px;
+  left: 200px;
+} */
 
-    top:0;
-left: 0;
-    width:100%;
-height: 20px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    opacity: 0.86;
-    z-index:1
+.Social-Icons {
+  color: #024345;
+  font-size: 12px;
+  margin: 5px;
+}
+
+.Drop {
+  width: 10rem;
+  transform: translate(-50%);
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  opacity: 86%;
 }

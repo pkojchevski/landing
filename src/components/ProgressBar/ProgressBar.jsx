@@ -1,15 +1,28 @@
 import React from 'react'
-import classes from './PrograssBar.module.css'
+import classes from './ProgressBar.module.css'
+
 function Header() {
-    return (
-        <div className={classes.ProgressBar}>
-      <ul className={classes.ProgressBarList}>
-        <li class="active">Step 1</li>
-        <li>Step 2</li>
-        <li>Step 3</li>
-      </ul>
-        </div>
-    )
+  return (
+    <div className={classes.TimelineWrapper}>
+      <div className={classes.Timeline}></div>
+      <div className={classes.Node}>
+        <p className={classes.NodeFeatured}>Featured Article</p>
+        <p className={classes.NodeTitle}>The ultimate GTQ guite to Atlanta</p>
+      </div>
+      <div className={classes.Node}>
+        <p className={classes.NodeFeatured}>Featured Article</p>
+        <p className={classes.NodeTitle}>The ultimate GTQ guite to Atlanta</p>
+      </div>
+      <div className={classes.Node}>
+        <p className={classes.NodeFeatured}>Featured Article</p>
+        <p className={classes.NodeTitle}>The ultimate GTQ guite to Atlanta</p>
+      </div>
+      <div className={classes.Node}>
+        <p className={classes.NodeFeatured}>Featured Article</p>
+        <p className={classes.NodeTitle}>The ultimate GTQ guite to Atlanta</p>
+      </div>
+    </div>
+  )
 }
 
 export default Header
