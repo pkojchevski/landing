@@ -16,10 +16,11 @@
     font-weight: bold;
     text-align: center;
     margin: 0;
+    font-weight: bold;
 }
 
 .Title {
-    color: blue;
+    color: #2680EB;
     font-size: 12px;
     position: absolute;
     bottom: 2.3rem;
@@ -27,4 +28,5 @@
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
+    font-weight: bold;
 }

@@ -4,6 +4,7 @@ import { FaHome } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
 import { ReactComponent as Drop } from "../../assets/images/header_shape.svg";
 
 import {
@@ -16,7 +17,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-
+  NavbarText,
 } from "reactstrap";
 
 import SearchBox from "./SearchBox/SearchBox";
@@ -27,52 +28,58 @@ function Header() {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <div className={classes.Header}>
-      <Navbar light expand="md">
+      <Navbar expand="md" style={{ padding: "0 2rem", color: "#054D55" }}>
         <NavbarBrand href="/">
-          <FaHome />
+          <FaHome style={{ color: "#054D55", marginTop: "-4px" }} />
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                DESTINATONS
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Destination 1</DropdownItem>
-                <DropdownItem>Destination 2</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                TOPICS
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Topic 1</DropdownItem>
-                <DropdownItem>Topic 2</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-          <Navbar>
-            <SearchBox />
-            <div className={classes.SocialIcons}>
-              <FaTwitter />
-              <FaFacebook />
-              <FaInstagram />
-            </div>
-            <SocialIcons/>
-          </Navbar>
-        </Collapse>
+        <Nav className="mr-auto" navbar>
+          <UncontrolledDropdown nav inNavbar>
+            <DropdownToggle
+              nav
+              style={{ color: "#054D55", marginLeft: "3rem" }}
+            >
+              DESTINATIONS <FaPlay className={classes.Play} />
+            </DropdownToggle>
+            <DropdownMenu right>
+              <DropdownItem>Destination 1</DropdownItem>
+              <DropdownItem>Destination 2</DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem>Reset</DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+          <UncontrolledDropdown nav inNavbar>
+            <DropdownToggle
+              nav
+              style={{ color: "#054D55", marginLeft: "1rem" }}
+            >
+              TOPICS <FaPlay className={classes.Play} />
+            </DropdownToggle>
+            <DropdownMenu right>
+              <DropdownItem>Topic 1</DropdownItem>
+              <DropdownItem>Topic 2</DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem>Reset</DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+          <NavbarText>
+            <span className={classes.Navbartext}>one planet rating</span>
+          </NavbarText>
+        </Nav>
+        <Navbar>
+          <SearchBox />
+          <SocialIcons />
+        </Navbar>
       </Navbar>
       <div style={{ position: "relative" }}>
         <div className={classes.Drop}>
           <Drop />
         </div>
-        
+        <img
+          className={classes.Logo}
+          src={require("../../assets/images/logo_transparent.png")}
+          alt="logo"
+        ></img>
       </div>
     </div>
   );

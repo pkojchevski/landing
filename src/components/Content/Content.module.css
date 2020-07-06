@@ -2,16 +2,14 @@
     max-width: 100vw;
     height: 100vh;
     background-size: cover;
-    background-image: url('../../assets/images/stock-photo-winters-karlskrona-november-2015-129077569.png');
-    background-color:rgba(0, 0, 0, 0.31);
-
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.31),  rgba(0, 0, 0, 0.31)),url('../../assets/images/stock-photo-winters-karlskrona-november-2015-129077569.png');
     position:relative
 }
 
 .Text {
     position:absolute;
-    bottom:0;
-    left:5rem
+    left:5rem;
+    bottom: 2rem;
 }
 
 .Title {
@@ -35,28 +33,17 @@
     margin:2rem;
 }
 
-.ImageList {
-    
-   display:flex;
-   justify-content:center;
-}
 
-.ImageList li {
-    display:flex;
-    list-style-type:none;
-margin-left:3rem;    
-
- }
 
  .WorldMap {
-    background-image: url(/static/media/worldmap.db37aa0a.png);
+    background-image:url('../../assets/images/worldmap.png');
     background-size: cover;
-    width: 100%;
+    width: 98%;
     height: 80%;
     background-repeat: no-repeat;
     position: absolute;
-    left: -280px;;
-    opacity:0.46;
+    left: -310px;
+    opacity: 0.46;
 
  }
 
@@ -64,28 +51,10 @@ margin-left:3rem;
 
 
 
-
-
-
-.SecondSectionButton {
-    display: flex;
-    background: transparent;
-    outline: none;
-    border: 5px solid #2680EB;
-    color: #2680EB;
-    font: Medium 37px/44px Roboto;
-}
-
-.SecondSectionButtonWrapper {
-    display: flex;
-
-    margin: 2rem auto;
-    justify-content: center;
-}
-
 .FT2Wrapper {
     background-color:#E4E4E4;
-    width:100%;
+    /* width:100%; */
+    height: 32rem;
     position: relative;
 }
 
@@ -120,18 +89,16 @@ margin-left:3rem;
 }
 
 .Footer {
-    width:100%;
-    height:15rem;
+    height:13rem;
 background: #000;
 position: relative;
-    margin-top: 5.5rem;
 
 }
 
 .FooterImage {
     height: 12rem;
     width: 80%;
-    bottom: -2.95rem;
+    bottom: -1rem;
     position: relative;
     display: block;
     margin: auto;
@@ -143,19 +110,25 @@ position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3rem;
+    padding: 0 5rem;
     position:absolute;
     color:#fff;
     top:2.5rem;
 }
 
+.FooterSocial {
+    text-align: center;
+    font-size: 20px;
+}
+
 .FooterLogo {
-    width:7rem;
+    width:10rem;
 }
 
 
 .FooterSubscribe {
     text-align:center;
+    font-size: 20px;
 }
 
 .FooterSubscribeButton {
@@ -163,4 +136,15 @@ position: relative;
     color:#fff;
     outline:none;
     border:1px solid #fff;
+}
+
+.Copyright {
+        color: #F5F5F5;
+        opacity: 0.68;
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        bottom: 0.4rem;
+        transform: translate(-50%);
+        font-size: 10px;
 }

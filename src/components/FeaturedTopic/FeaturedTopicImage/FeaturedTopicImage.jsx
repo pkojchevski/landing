@@ -8,7 +8,7 @@ function FeaturedTopicImage({ featured }) {
       <div
         className={classes.Image}
         style={{
-          backgroundImage: `url(${featured.imgUrl})`,
+          backgroundImage: `linear-gradient(to right, rgba(38,132,173, 0.3), rgba(38,132,173, 0.3)),url(${featured.imgUrl})`,
         }}
       ></div>
       <div className={classes.Title}>{featured.title}</div>

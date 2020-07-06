@@ -3,7 +3,7 @@
 }
 
 .Title {
-    color: #2680EB;
+    color: #2684AD;
     background: #ffff;
     display: inline;
     z-index: 1;
@@ -12,7 +12,7 @@
  }
 
 .Line {
-    border-top:2px solid #2680EB;
+    border-top:2px solid #2684AD;
     margin-top:-12px;
     z-index:-1;
 }
