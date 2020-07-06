@@ -41,7 +41,7 @@ function Content() {
         </section>
 
         <section className={classes.FeaturedTopic2}>
-          <TitleLine margin="45rem" title="Featured Topics" />
+          <TitleLine margin="38rem" title="Featured Topics" />
           <div className={classes.FT2Wrapper}>
             <img
               className={classes.FT2Image}
