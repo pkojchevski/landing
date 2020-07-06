@@ -4,7 +4,7 @@ import { FaHome } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import { ReactComponent as Drop } from "../../assets/images/drop.svg";
+import { ReactComponent as Drop } from "../../assets/images/header_shape.svg";
 
 import {
   Collapse,
@@ -12,16 +12,15 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText,
+
 } from "reactstrap";
 
 import SearchBox from "./SearchBox/SearchBox";
+import SocialIcons from "../SocialIcons/SocialIcons";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,6 +64,7 @@ function Header() {
               <FaFacebook />
               <FaInstagram />
             </div>
+            <SocialIcons/>
           </Navbar>
         </Collapse>
       </Navbar>
@@ -72,6 +72,7 @@ function Header() {
         <div className={classes.Drop}>
           <Drop />
         </div>
+        
       </div>
     </div>
   );

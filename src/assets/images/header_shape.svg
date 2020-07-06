@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    id="svg8"
    version="1.1"
@@ -12,27 +8,15 @@
    width="210mm">
   <defs
      id="defs2" />
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
   <g
      id="layer1">
     <rect
        y="3.6605108"
        x="11.562366"
-       height="17.506155"
-       width="192.16679"
+       height="17"
+       width="192"
        id="rect44"
-       style="fill:#008000;stroke:none;stroke-width:0.264583" />
+       style="fill:#ffffff;stroke:none;stroke-width:0.2" />
     <path
        r="16.637526"
        cy="19.897133"
@@ -44,13 +28,13 @@
        cy="20.245668"
        cx="107.77644"
        id="path85"
-       style="fill:#008000;stroke:none;stroke-width:0.264583" />
+       style="fill:#ffffff;stroke:none;stroke-width:0.264583" />
     <path
        id="path2847"
        d="m 85.364877,17.833895 11.622884,0.04677 -4.677217,8.138357 C 89.268737,18.527845 82.015347,23.556783 85.364877,17.833895 Z"
-       style="fill:#008000;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+       style="fill:#ffffff;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <path
-       style="fill:#008000;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#ffffff;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 130.15773,18.058022 -11.62297,-0.01592 4.63323,8.163481 c 3.08219,-7.474656 10.30834,-2.40668 6.98974,-8.147561 z"
        id="path2847-0" />
   </g>

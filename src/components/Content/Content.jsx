@@ -6,10 +6,10 @@ import imgSecond from "../../assets/images/2.png";
 import imgThird from "../../assets/images/3.png";
 import imgQuarter from "../../assets/images/4.png";
 import CulturalImage from "../CulturalImage/CulturalImage";
-import WorldMap from "../../assets/images/worldmap.png";
 import TitleLine from "../TitleLine/TitleLine";
 import FeaturedTopic from "../FeaturedTopic/FeaturedTopic";
 import OPRPLatform from "../OPRPlatform/OPRPLatform";
+import SocialIcons from '../SocialIcons/SocialIcons'
 
 // const blogs = [{ image: '../../assets/images/stock-photo-winters-karlskrona-november-2015-129077569.png', title: '5 ways yu can help reduce over-tourism' }]
 function Content() {
@@ -103,19 +103,19 @@ function Content() {
         ></img>
         <div className={classes.FooterContent}>
           <div className={classes.FooterSocial}>
-            <p>Find us here</p>
+            <p>Find Us Here</p>
             <SocialIcons />
           </div>
-          <img className={classes.FooterLogo}>
-            src={require("../../assets/images/logo_transparent.png")}
+          <img className={classes.FooterLogo}
+            src={require("../../assets/images/logo_transparent.png")} alt="footerLogo">
           </img>
           <div className={classes.FooterSubscribe}>
-            <p>subscribe to our</p>
-            <button>Newsletter</button>
+            <p>Subscribe to our</p>
+            <button className={classes.FooterSubscribeButton}>Newsletter</button>
           </div>
-        </div>
+          </div>
       </footer>
-    </div>
+    </>
   );
 }
 
