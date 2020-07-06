@@ -2,6 +2,10 @@
   "name": "landing",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.7.0",
+    "npm": "6.10.2"
+  },
   "dependencies": {
     "bootstrap": "^4.5.0",
     "cra-template": "1.0.3",
