@@ -28,7 +28,7 @@ function OPRImages() {
   ]);
   return (
     <div className={classes.Images}>
-      <div class={classes.ImagesWrapper}>
+      <div className={classes.ImagesWrapper}>
         {images.map((image, index) => (
           <SingleImage
             key={index}

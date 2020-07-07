@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import classes from "./Header.module.css";
 import { FaHome } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
 import { ReactComponent as Drop } from "../../assets/images/header_shape.svg";
-
+import { useHistory } from "react-router-dom";
 import {
-  Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
@@ -26,9 +22,14 @@ import SocialIcons from "../SocialIcons/SocialIcons";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+  const history = useHistory();
+  const goToHome = () => {
+    history.push("/");
+    window.location.href = "/";
+  };
   return (
     <div className={classes.Header}>
-      <Navbar expand="md" style={{ padding: "0 2rem", color: "#054D55" }}>
+      <Navbar expand="md sm" style={{ padding: "0 2rem", color: "#054D55" }}>
         <NavbarBrand href="/">
           <FaHome style={{ color: "#054D55", marginTop: "-4px" }} />
         </NavbarBrand>
@@ -63,7 +64,13 @@ function Header() {
             </DropdownMenu>
           </UncontrolledDropdown>
           <NavbarText>
-            <span className={classes.Navbartext}>one planet rating</span>
+            <a
+              target="_blank"
+              href="https://oneplanetrating.org/"
+              className={classes.Navbartext}
+            >
+              one planet rating
+            </a>
           </NavbarText>
         </Nav>
         <Navbar>
@@ -79,6 +86,7 @@ function Header() {
           className={classes.Logo}
           src={require("../../assets/images/logo_transparent.png")}
           alt="logo"
+          onClick={goToHome}
         ></img>
       </div>
     </div>

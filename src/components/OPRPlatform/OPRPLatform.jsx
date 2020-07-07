@@ -19,7 +19,7 @@ function OPRPLatform() {
             JOIN <span>THE</span>
             <span>MOVEMENT</span>
           </h2>
-          <p class={classes.TextParagraph}>
+          <p className={classes.TextParagraph}>
             Do you like what we are doing. Sign up and start rating, earn up to
             500 points on your first Sign Up.
           </p>

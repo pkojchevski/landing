@@ -7,30 +7,34 @@
   z-index: 1;
 }
 
-.Play{
-  transform:rotate(90deg);
-    margin-top: -5px;
-    font-size:16px;
+.Play {
+  transform: rotate(90deg);
+  margin-top: -5px;
+  font-size: 16px;
 }
 
 .Navbartext {
-   margin-left:1rem;
-   top:-2px;
-   font-family:Roboto;
-   font-weight:bold;
-   position:relative;
+  margin-left: 1rem;
+  top: -2px;
+  font-family: Roboto;
+  font-weight: bold;
+  position: relative;
+  color: #054d55 !important;
+}
+
+.Navbartext:hover {
+  text-decoration: none !important;
 }
 
 .Navbartext::before {
-content: '';
-width: 28px;
-background-color: #054D55;
-height: 2px;
-/* z-index: 1; */
-position: absolute;
-bottom: 0px;
+  content: "";
+  width: 28px;
+  background-color: #054d55;
+  height: 2px;
+  /* z-index: 1; */
+  position: absolute;
+  bottom: 0px;
 }
-
 
 .Social-Icons {
   color: #024345;
@@ -50,7 +54,8 @@ bottom: 0px;
 
 .Logo {
   width: 6rem;
-    position: absolute;
-    left: 38.2rem;
-    top: -1.5rem;
+  position: absolute;
+  left: 38.2rem;
+  top: -1.5rem;
+  cursor: pointer;
 }

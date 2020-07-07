@@ -36,8 +36,8 @@ function LatestPosts() {
     <div>
       <ul className={classes.ImageList}>
         {latestsPosts.map((post, index) => (
-          <li>
-            <LatestPostImage post={post} key={index} />
+          <li key={index}>
+            <LatestPostImage post={post} />
           </li>
         ))}
       </ul>
