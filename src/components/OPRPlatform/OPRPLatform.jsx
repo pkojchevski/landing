@@ -10,7 +10,7 @@ function OPRPLatform() {
         <div className={classes.LogoWrapper}>
           <img
             className={classes.LogoBg}
-            src={require("../../assets/images/logo_with_bg.png")}
+            src={require("../../assets/images/globe.png")}
             alt="LogoBg"
           ></img>
         </div>
