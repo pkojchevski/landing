@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import classes from "./Header.module.css";
 import { FaHome } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
-import { ReactComponent as Drop } from "../../assets/images/header_shape.svg";
+// import { ReactComponent as Drop } from "../../assets/images/header_shape.svg";
+import Drop from '../../assets/images/header_shape.png'
 import { useHistory } from "react-router-dom";
 import {
   Navbar,
@@ -29,7 +30,7 @@ function Header() {
   };
   return (
     <div className={classes.Header}>
-      <Navbar expand="md sm" style={{ padding: "0 2rem", color: "#054D55" }}>
+      <Navbar expand="md" style={{ paddingLeft: '2rem', paddingRight: '2rem', color: "#054D55", position: 'relative' }}>
         <NavbarBrand href="/">
           <FaHome style={{ color: "#054D55", marginTop: "-4px" }} />
         </NavbarBrand>
@@ -78,16 +79,18 @@ function Header() {
           <SocialIcons />
         </Navbar>
       </Navbar>
-      <div style={{ position: "relative" }}>
+      <div>
         <div className={classes.Drop}>
-          <Drop />
+          {/* <Drop /> */}
+          <img className={classes.Headerdrop} src={require("../../assets/images/header_shape.png")}></img>
+          <img
+            className={classes.Logo}
+            src={require("../../assets/images/logo_transparent.png")}
+            alt="logo"
+            onClick={goToHome}
+          ></img>
         </div>
-        <img
-          className={classes.Logo}
-          src={require("../../assets/images/logo_transparent.png")}
-          alt="logo"
-          onClick={goToHome}
-        ></img>
+
       </div>
     </div>
   );

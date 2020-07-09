@@ -47,15 +47,21 @@
   transform: translate(-50%);
   position: absolute;
   left: 50%;
-  top: -3.3rem;
+  top: 0rem;
   opacity: 0.86;
   z-index: -1;
+
+}
+
+.Headerdrop {
+  width:100vw;
 }
 
 .Logo {
-  width: 6rem;
+  width: 5.5rem;
   position: absolute;
-  left: 38.2rem;
-  top: -1.5rem;
+  left: 49.4%;
+  transform:translate(-50%, 50%);
+  top: 0;
   cursor: pointer;
 }
