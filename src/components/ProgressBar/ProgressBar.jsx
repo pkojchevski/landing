@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import classes from "./ProgressBar.module.css";
 
-function ProgressBar() {
-  const [posts, setPosts] = useState([
-    { title: "The ultimate GTQ guide to " },
-    { title: "The ultimate GTQ guide to Atlanta" },
-    { title: "The ultimate GTQ guide to Atlanta" },
-    { title: "The ultimate GTQ guide to Atlanta" },
-  ]);
+function ProgressBar({ posts }) {
+  // const [posts, setPosts] = useState([
+  //   { title: "The ultimate GTQ guide to " },
+  //   { title: "The ultimate GTQ guide to Atlanta" },
+  //   { title: "The ultimate GTQ guide to Atlanta" },
+  //   { title: "The ultimate GTQ guide to Atlanta" },
+  // ]);
   return (
     <div className={classes.TimelineWrapper}>
       <div className={classes.Timeline}></div>
