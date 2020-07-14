@@ -8,12 +8,19 @@ import OPRPLatform from "../OPRPlatform/OPRPLatform";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import LatestsPosts from "../LatestPosts/LatestPosts";
 import { fetchPosts } from '../../store/actions/posts.actions';
+import { useHistory } from "react-router-dom";
 
 function Content({ posts, getPosts, loading }) {
 
   useEffect(() => {
     getPosts();
   }, [])
+
+  const history = useHistory();
+  const goToPost = (post) => {
+    // history.push("/");
+    window.location.href = "/";
+  };
 
 
   console.log('posts:', posts && posts.length > 0 && posts[0].title)
@@ -29,10 +36,10 @@ function Content({ posts, getPosts, loading }) {
             <div className={classes.Title}>
               {posts[0].title}
             </div>
-            <button className={classes.TitleButton}>READ MORE</button>
+            <button className={classes.TitleButton} onClick={() => goToPost(posts[0])}>READ MORE</button>
           </div>
           <div className={classes.ProgressBarWrapper}>
-            <ProgressBar posts={posts.slice(1, 4)} />
+            <ProgressBar posts={posts.slice(1, 5)} />
           </div>
           <div className={classes.WorldMap}></div>
         </section>

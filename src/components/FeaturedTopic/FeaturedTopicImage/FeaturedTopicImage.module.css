@@ -1,8 +1,8 @@
 
 
 .ImageWrapper {
-    position:relative
-
+    position:relative;
+    cursor:pointer;
 }
 
 .Image {

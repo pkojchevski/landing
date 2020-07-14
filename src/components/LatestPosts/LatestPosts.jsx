@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classes from "./LatestPosts.module.css";
 import LatestPostImage from "./LatestPostImage/LatestPostImage";
+import { useHistory } from "react-router-dom";
 
 function LatestPosts() {
   const [latestsPosts, setLatestsPosts] = useState([
@@ -32,6 +33,14 @@ function LatestPosts() {
       tag: "#Travel",
     },
   ]);
+
+  const history = useHistory();
+  const goTo = () => {
+    console.log('clicked')
+    // history.push("/");
+    window.location.href = "/";
+  }
+
   return (
     <div>
       <ul className={classes.ImageList}>
@@ -42,7 +51,7 @@ function LatestPosts() {
         ))}
       </ul>
       <div className={classes.ButtonWrapper}>
-        <button className={classes.Button}>READ MORE</button>
+        <button className={classes.Button} onClick={goTo}>READ MORE</button>
       </div>
     </div>
   );
