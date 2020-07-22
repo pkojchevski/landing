@@ -8,9 +8,8 @@
 }
 
 .Play {
-  transform: rotate(90deg);
   margin-top: -5px;
-  font-size: 16px;
+  font-size: 28px;
 }
 
 .Navbartext {
@@ -50,18 +49,67 @@
   top: 0rem;
   opacity: 0.86;
   z-index: -1;
-
 }
 
 .Headerdrop {
-  width:100vw;
+  width: 100vw;
 }
 
 .Logo {
   width: 5.5rem;
   position: absolute;
   left: 49.4%;
-  transform:translate(-50%, 50%);
+  transform: translate(-50%, 50%);
   top: 0;
   cursor: pointer;
+}
+
+.TopicMenuItem {
+  text-transform: uppercase;
+  color: #063435;
+  font-size: 28px;
+  padding: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Text1 {
+  letter-spacing: 5px;
+}
+
+.Text2 {
+  margin-left: 5px;
+  letter-spacing: 5px;
+}
+
+.MenuTitleOpen {
+  background: #2684ad;
+  color: #fff;
+  border-radius: 17px;
+  padding: 1px 5px;
+}
+
+.DestinationsMenuItem {
+  text-transform: uppercase;
+  color: #707070;
+  text-transform: uppercase;
+  padding: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.DestinationsCitiesText {
+  opacity: 80%;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.DestinationsText {
+  opacity: 80%;
+  font-size: 24px;
+  letter-spacing: 2px;
 }
