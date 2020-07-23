@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect} from "react";
 import classes from "./Header.module.css";
 import { FaHome } from "react-icons/fa";
 import { FaCaretDown } from "react-icons/fa";
@@ -19,33 +19,78 @@ import {
 import SearchBox from "./SearchBox/SearchBox";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import { FaGlobeAfrica } from "react-icons/fa";
+// import {ReactComponent as Brazil} from '../../assets/images/christ-the-redeemer.svg'
+// import {ReactComponent as Social} from '../../assets/images/social.svg'
 import DestinationsMenuImages from "../DestinationsMenuImages/DestinationsMenuImages";
+
+
+function useOutsideAlerter(ref) {
+  useEffect(() => {
+    /**
+     * Alert if clicked on outside of element
+     */
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        alert("You clicked outside of me!");
+      }
+    }
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+}
+
+
+
+
 function Header() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [destinationsIsOpen, setDestinationsIsOpen] = useState(false);
   const [topicsIsOpen, setTopicsIsOpen] = useState(false);
+  const menuRef=useRef();
   const toggle = () => {
     setIsOpen(!isOpen);
-    setDestinationsIsOpen(!destinationsIsOpen);
-    setTopicsIsOpen(!topicsIsOpen);
-    console.log("toggle");
   };
+
+  // useOutsideAlerter(menuRef);
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClick);
+    // return function to be called when unmounted
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+    };
+  })
   const destinationsToggle = () => {
     setDestinationsIsOpen(!destinationsIsOpen);
-  };
+  }
 
   const topicsToggle = () => {
     setTopicsIsOpen(!topicsIsOpen);
   };
+
+  const handleClick = e => {
+    if (menuRef && menuRef.current.contains(e.target)) {
+    console.log('inside click')
+    setDestinationsIsOpen(!destinationsIsOpen);
+      return;
+    }
+    // outside click 
+    console.log('outside click')
+    destinationsIsOpen && destinationsToggle()
+  };
+
   const history = useHistory();
   const goToHome = () => {
     history.push("/");
     window.location.href = "/";
   };
 
-  console.log("isOpen:", isOpen);
   return (
-    <div className={classes.Header}>
+    <div className={classes.Header} ref={menuRef}>
       <Navbar
         expand="md"
         style={{
@@ -58,29 +103,30 @@ function Header() {
         <NavbarBrand href="/">
           <FaHome style={{ color: "#054D55", marginTop: "-4px" }} />
         </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
+        {/* <NavbarToggler onClick={toggle} /> */}
         <Nav className="mr-auto" navbar>
-          <UncontrolledDropdown nav inNavbar>
-            <DropdownToggle
+          <UncontrolledDropdown nav inNavbar >
+            <DropdownToggle 
               nav
               style={{ color: "#054D55", marginLeft: "3rem" }}
+              onClick={(e)=>handleClick(e)}
             >
               {destinationsIsOpen ? (
                 <div
                   className={classes.MenuTitleOpen}
-                  onClick={destinationsToggle}
+                  
                 >
                   DESTINATIONS
                   <FaCaretUp className={classes.Play} />
                 </div>
               ) : (
-                <div className={classes.MenuTitle}>
+                <div className={classes.MenuTitle} >
                   DESTINATIONS
                   <FaCaretDown className={classes.Play} />
                 </div>
               )}
             </DropdownToggle>
-            <DropdownMenu
+            <DropdownMenu 
               style={{
                 backgroundColor: "transparent",
                 margin: ".5rem 0 0",
