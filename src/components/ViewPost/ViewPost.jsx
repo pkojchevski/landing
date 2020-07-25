@@ -82,19 +82,20 @@ function ViewPost() {
                         {post.text.split('\n').map((item, i) => <p className={classes.PostText3} key={i}>{item}</p>)}
                     </Col>
                 </Row>
-
-                <Row>
-                    <Col>
-                        <div className={classes.RelatedPostsWrapper}>
-                            <div className={classes.RelatedPosts}>
-                                <h3 className={classes.RPTitle}>Related Articles</h3>
-                                <LatestPosts className={classes.LatestPostsList} posts={relatedPosts} removeButton={true} />
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
-
             </Container>
+
+            {/* <Row>
+                    <Col> */}
+            <div className={classes.RelatedPostsWrapper}>
+                <div className={classes.RelatedPosts}>
+                    <h3 className={classes.RPTitle}>Related Articles</h3>
+                    <LatestPosts className={classes.LatestPostsList} posts={relatedPosts} removeButton={true} />
+                </div>
+            </div>
+            {/* </Col>
+                </Row> */}
+
+
 
         </Fragment>
     )

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import classes from "./Header.module.css";
 import { FaHome } from "react-icons/fa";
 import { FaCaretDown } from "react-icons/fa";
@@ -10,6 +10,7 @@ import {
   NavbarBrand,
   Nav,
   UncontrolledDropdown,
+  Dropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
@@ -19,68 +20,26 @@ import {
 import SearchBox from "./SearchBox/SearchBox";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import { FaGlobeAfrica } from "react-icons/fa";
-// import {ReactComponent as Brazil} from '../../assets/images/christ-the-redeemer.svg'
-// import {ReactComponent as Social} from '../../assets/images/social.svg'
+import { ReactComponent as Brazil } from '../../assets/images/brazil.svg'
+import { ReactComponent as Social } from '../../assets/images/blogger.svg'
 import DestinationsMenuImages from "../DestinationsMenuImages/DestinationsMenuImages";
 
-
-function useOutsideAlerter(ref) {
-  useEffect(() => {
-    /**
-     * Alert if clicked on outside of element
-     */
-    function handleClickOutside(event) {
-      if (ref.current && !ref.current.contains(event.target)) {
-        alert("You clicked outside of me!");
-      }
-    }
-    // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref]);
-}
-
-
-
-
 function Header() {
-
   const [isOpen, setIsOpen] = useState(false);
-  const [destinationsIsOpen, setDestinationsIsOpen] = useState(false);
-  const [topicsIsOpen, setTopicsIsOpen] = useState(false);
-  const menuRef=useRef();
+  const [isDestinationsOpen, setDestinationsIsOpen] = useState(false);
+  const [isTopicsOpen, setTopicsIsOpen] = useState(false);
+
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
-  // useOutsideAlerter(menuRef);
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClick);
-    // return function to be called when unmounted
-    return () => {
-      document.removeEventListener("mousedown", handleClick);
-    };
-  })
-  const destinationsToggle = () => {
-    setDestinationsIsOpen(!destinationsIsOpen);
-  }
 
   const topicsToggle = () => {
-    setTopicsIsOpen(!topicsIsOpen);
+    setTopicsIsOpen(!isTopicsOpen);
   };
 
-  const handleClick = e => {
-    if (menuRef && menuRef.current.contains(e.target)) {
-    console.log('inside click')
-    setDestinationsIsOpen(!destinationsIsOpen);
-      return;
-    }
-    // outside click 
-    console.log('outside click')
-    destinationsIsOpen && destinationsToggle()
+  const destinationsToggle = () => {
+    setDestinationsIsOpen(!isDestinationsOpen);
   };
 
   const history = useHistory();
@@ -90,7 +49,7 @@ function Header() {
   };
 
   return (
-    <div className={classes.Header} ref={menuRef}>
+    <div className={classes.Header}>
       <Navbar
         expand="md"
         style={{
@@ -105,28 +64,29 @@ function Header() {
         </NavbarBrand>
         {/* <NavbarToggler onClick={toggle} /> */}
         <Nav className="mr-auto" navbar>
-          <UncontrolledDropdown nav inNavbar >
-            <DropdownToggle 
+          <Dropdown nav inNavbar isOpen={isDestinationsOpen} toggle={destinationsToggle}>
+            <DropdownToggle
               nav
               style={{ color: "#054D55", marginLeft: "3rem" }}
-              onClick={(e)=>handleClick(e)}
             >
-              {destinationsIsOpen ? (
-                <div
-                  className={classes.MenuTitleOpen}
-                  
+              {isDestinationsOpen ? (
+                <div className={classes.MenuTitleOpen}
                 >
                   DESTINATIONS
-                  <FaCaretUp className={classes.Play} />
+                  <FaCaretUp
+                    className={classes.Play}
+                  />
                 </div>
               ) : (
-                <div className={classes.MenuTitle} >
-                  DESTINATIONS
-                  <FaCaretDown className={classes.Play} />
-                </div>
-              )}
+                  <div className={classes.MenuTitle} >
+                    DESTINATIONS
+                  <FaCaretDown
+                      className={classes.Play}
+                    />
+                  </div>
+                )}
             </DropdownToggle>
-            <DropdownMenu 
+            <DropdownMenu
               style={{
                 backgroundColor: "transparent",
                 margin: ".5rem 0 0",
@@ -182,33 +142,36 @@ function Header() {
                 ></div>
               </DropdownItem>
             </DropdownMenu>
-          </UncontrolledDropdown>
-          <UncontrolledDropdown nav inNavbar>
+          </Dropdown>
+          <Dropdown inNavbar isOpen={isTopicsOpen} toggle={topicsToggle}>
             <DropdownToggle
               nav
               style={{ color: "#054D55", marginLeft: "1rem" }}
             >
-              {topicsIsOpen ? (
-                <div
-                  className={classes.MenuTitleOpen}
-                  onClick={() => topicsToggle()}
-                >
+              {isTopicsOpen ? (
+                <div className={classes.MenuTitleOpen}>
                   TOPICS
-                  <FaCaretUp className={classes.Play} />
+                  <FaCaretUp
+                    className={classes.Play}
+                  />
                 </div>
               ) : (
-                <div
-                  className={classes.MenuTitle}
-                  onClick={() => topicsToggle()}
-                >
-                  TOPICS
-                  <FaCaretDown className={classes.Play} />
-                </div>
-              )}
+                  <div className={classes.MenuTitle} >
+                    TOPICS
+                  <FaCaretDown
+                      className={classes.Play}
+                    />
+                  </div>
+
+                )}
             </DropdownToggle>
             <DropdownMenu
+              className={classes.Center}
               style={{
                 backgroundColor: "transparent",
+                backgroundColor: "transparent",
+                margin: ".5rem 0 0",
+                border: "none",
               }}
             >
               <DropdownItem
@@ -234,11 +197,11 @@ function Header() {
               >
                 <div
                   className={classes.TopicMenuItem}
-                  style={{ height: "100px" }}
+                  style={{ height: "140px" }}
                 >
                   <span className={classes.Text1}>soc</span>
                   <span style={{ color: "green" }}>
-                    <FaGlobeAfrica />
+                    <Social width='30px' height='30px' />
                   </span>
                   <span className={classes.Text2}>al</span>
                 </div>
@@ -254,7 +217,8 @@ function Header() {
                 >
                   <span className={classes.Text1}>cul</span>
                   <span style={{ color: "green" }}>
-                    <FaGlobeAfrica />
+
+                    < Brazil width='30px' height='30px' />
                   </span>
                   <span className={classes.Text2}>ural</span>
                 </div>
@@ -270,7 +234,7 @@ function Header() {
                 ></div>
               </DropdownItem>
             </DropdownMenu>
-          </UncontrolledDropdown>
+          </Dropdown>
           <NavbarText>
             <a
               target="_blank"

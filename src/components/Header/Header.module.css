@@ -30,7 +30,6 @@
   width: 28px;
   background-color: #054d55;
   height: 2px;
-  /* z-index: 1; */
   position: absolute;
   bottom: 0px;
 }
@@ -52,13 +51,17 @@
 }
 
 .Headerdrop {
-  width: 100vw;
+  width: 100%;
+}
+
+button:focus {
+  outline:none !important;
 }
 
 .Logo {
   width: 5.5rem;
   position: absolute;
-  left: 49.4%;
+  left: 48.8%;
   transform: translate(-50%, 50%);
   top: 0;
   cursor: pointer;
@@ -106,6 +109,11 @@
   opacity: 80%;
   font-size: 18px;
   letter-spacing: 2px;
+}
+
+.Center {
+  left: 50%;
+    transform: translate(-50%);
 }
 
 .DestinationsText {
