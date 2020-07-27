@@ -7,9 +7,20 @@ function LatestPosts({ posts, removeButton }) {
 
 
   const history = useHistory();
+  const goTo = () => {
+    console.log('clicked')
+    // history.push("/");
+    window.location.href = "/";
+  }
   const goToPost = () => {
+    console.log('clicked')
     history.push("/post");
-  };
+
+  }
+
+
+
+
 
   return (
     <div>
@@ -21,7 +32,7 @@ function LatestPosts({ posts, removeButton }) {
         ))}
       </ul>
       {!removeButton && <div className={classes.ButtonWrapper}>
-        <button className={classes.Button} onClick={goToPost}>READ MORE</button>
+        <button className={classes.Button} onClick={goTo}>READ MORE</button>
       </div>}
     </div>
   );

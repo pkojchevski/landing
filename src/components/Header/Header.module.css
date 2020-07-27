@@ -86,11 +86,14 @@ button:focus {
 }
 
 .TopicMenuItemEnvironmental img{  
-  width:95%;
+  width:90%;
 }
 
-.TopicMenuItemSocial img ,.TopicMenuItemCultural img{  
-   width:105%;
+.TopicMenuItemSocial img {  
+   width:95%;
+}
+.TopicMenuItemCultural img {
+  width:105%;
 }
 
 
@@ -103,11 +106,22 @@ button:focus {
   letter-spacing: 5px;
 }
 
+.MenuTitle {
+  color:#054D55;
+  font-size:18px;
+  font-weight:bold;
+  font-family:'Roboto';
+  padding: 1px 0px 1px 7px;
+}
+
 .MenuTitleOpen {
   background: #2684ad;
   color: #fff;
   border-radius: 17px;
   padding:1px 0px 1px 7px;
+  font-size:18px;
+  font-weight:bold;
+  font-family:'Roboto';
 }
 
 .DestinationsMenuItem {
