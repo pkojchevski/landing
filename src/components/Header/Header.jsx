@@ -3,6 +3,9 @@ import classes from "./Header.module.css";
 import { FaHome } from "react-icons/fa";
 import { FaCaretDown } from "react-icons/fa";
 import { FaCaretUp } from "react-icons/fa";
+import Environmental from '../../assets/images/Environmental_text.png';
+import Cultural from '../../assets/images/cultural_text.png';
+import Social from '../../assets/images/social_text.png';
 import { useHistory } from "react-router-dom";
 import {
   Navbar,
@@ -19,9 +22,6 @@ import {
 
 import SearchBox from "./SearchBox/SearchBox";
 import SocialIcons from "../SocialIcons/SocialIcons";
-import { FaGlobeAfrica } from "react-icons/fa";
-import { ReactComponent as Brazil } from '../../assets/images/brazil.svg'
-import { ReactComponent as Social } from '../../assets/images/blogger.svg'
 import DestinationsMenuImages from "../DestinationsMenuImages/DestinationsMenuImages";
 
 function Header() {
@@ -126,7 +126,7 @@ function Header() {
               >
                 <div
                   className={classes.DestinationsMenuItem}
-                  style={{ height: "50px" }}
+                  style={{ height: "60px" }}
                 >
                   <p className={classes.DestinationsText}>Restaurants</p>
                 </div>
@@ -183,11 +183,7 @@ function Header() {
                   className={classes.TopicMenuItem}
                   style={{ height: "70px" }}
                 >
-                  <span className={classes.Text1}>envir</span>
-                  <span style={{ color: "green" }}>
-                    <FaGlobeAfrica />
-                  </span>
-                  <span className={classes.Text2}>nment</span>
+                  <img src={Environmental} />
                 </div>
               </DropdownItem>
               <DropdownItem
@@ -199,11 +195,7 @@ function Header() {
                   className={classes.TopicMenuItem}
                   style={{ height: "140px" }}
                 >
-                  <span className={classes.Text1}>soc</span>
-                  <span style={{ color: "green" }}>
-                    <Social width='30px' height='30px' />
-                  </span>
-                  <span className={classes.Text2}>al</span>
+                  <img src={Social} />
                 </div>
               </DropdownItem>
               <DropdownItem
@@ -213,14 +205,9 @@ function Header() {
               >
                 <div
                   className={classes.TopicMenuItem}
-                  style={{ height: "50px" }}
+                  style={{ height: "60px" }}
                 >
-                  <span className={classes.Text1}>cul</span>
-                  <span style={{ color: "green" }}>
-
-                    < Brazil width='30px' height='30px' />
-                  </span>
-                  <span className={classes.Text2}>ural</span>
+                  <img src={Cultural} />
                 </div>
               </DropdownItem>
               <DropdownItem
