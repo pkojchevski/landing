@@ -7,23 +7,21 @@ function LatestPosts({ posts, removeButton }) {
 
 
   const history = useHistory();
-  const goTo = () => {
-    console.log('clicked')
-    // history.push("/");
-    window.location.href = "/";
-  }
+  const goToPost = () => {
+    history.push("/post");
+  };
 
   return (
     <div>
       <ul className={classes.ImageList}>
         {posts.map((post, index) => (
-          <li key={index}>
+          <li key={index} onClick={goToPost} style={{ cursor: 'pointer' }}>
             <LatestPostImage post={post} />
           </li>
         ))}
       </ul>
       {!removeButton && <div className={classes.ButtonWrapper}>
-        <button className={classes.Button} onClick={goTo}>READ MORE</button>
+        <button className={classes.Button} onClick={goToPost}>READ MORE</button>
       </div>}
     </div>
   );

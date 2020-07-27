@@ -18,7 +18,6 @@ function Content({ posts, getPosts, loading }) {
   const history = useHistory();
   const goToPost = () => {
     history.push("/post");
-    // window.location.href = "/";
   };
 
   const [latestsPosts, setLatestsPosts] = useState([
@@ -52,7 +51,7 @@ function Content({ posts, getPosts, loading }) {
   ]);
 
 
-  console.log('posts:', posts && posts.length > 0 && posts[0].title)
+  // console.log('posts:', posts && posts.length > 0 && posts[0].title)
   return (
     <Fragment>
       <main>
@@ -65,7 +64,7 @@ function Content({ posts, getPosts, loading }) {
             <div className={classes.Title}>
               {posts[0].title}
             </div>
-            <button className={classes.TitleButton} onClick={() => goToPost()}>READ MORE</button>
+            <button className={classes.TitleButton} onClick={goToPost}>READ MORE</button>
           </div>
           <div className={classes.ProgressBarWrapper}>
             <ProgressBar posts={posts.slice(1, 5)} />

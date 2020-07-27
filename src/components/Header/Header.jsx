@@ -169,9 +169,9 @@ function Header() {
               className={classes.Center}
               style={{
                 backgroundColor: "transparent",
-                backgroundColor: "transparent",
                 margin: ".5rem 0 0",
                 border: "none",
+                width: '350px'
               }}
             >
               <DropdownItem
@@ -180,7 +180,7 @@ function Header() {
                 }}
               >
                 <div
-                  className={classes.TopicMenuItem}
+                  className={classes.TopicMenuItemEnvironmental}
                   style={{ height: "70px" }}
                 >
                   <img src={Environmental} />
@@ -192,8 +192,8 @@ function Header() {
                 }}
               >
                 <div
-                  className={classes.TopicMenuItem}
-                  style={{ height: "140px" }}
+                  className={classes.TopicMenuItemSocial}
+                  style={{ height: "120px" }}
                 >
                   <img src={Social} />
                 </div>
@@ -204,8 +204,12 @@ function Header() {
                 }}
               >
                 <div
-                  className={classes.TopicMenuItem}
-                  style={{ height: "60px" }}
+                  className={classes.TopicMenuItemCultural}
+                  style={{
+                    height: "60px", alignItems: 'flex-end',
+                    marginTop: ".5rem",
+                    marginBottom: "-.5rem"
+                  }}
                 >
                   <img src={Cultural} />
                 </div>
