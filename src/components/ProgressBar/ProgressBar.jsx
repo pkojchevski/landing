@@ -8,12 +8,12 @@ function ProgressBar({ posts }) {
 
   }
   return (
-    <div className={classes.TimelineWrapper} onClick={goToPost}>
+    <div className={classes.TimelineWrapper} >
       <div className={classes.Timeline}></div>
       {posts.map((post, index) => (
-        <div className={classes.Node} key={index} style={{ cursor: 'pointer' }}>
+        <div className={classes.Node} key={index} >
           <p className={classes.NodeFeatured}>Featured Article</p>
-          <p className={classes.NodeTitle}>{post.title}</p>
+          <p className={classes.NodeTitle} style={{ cursor: 'pointer' }} onClick={goToPost}>{post.title}</p>
         </div>
       ))
       }

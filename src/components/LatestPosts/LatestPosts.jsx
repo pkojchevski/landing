@@ -5,7 +5,6 @@ import { useHistory } from "react-router-dom";
 
 function LatestPosts({ posts, removeButton }) {
 
-
   const history = useHistory();
   const goTo = () => {
     console.log('clicked')
@@ -17,8 +16,6 @@ function LatestPosts({ posts, removeButton }) {
     history.push("/post");
 
   }
-
-
 
 
 

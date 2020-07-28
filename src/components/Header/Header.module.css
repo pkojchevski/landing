@@ -19,6 +19,7 @@
   font-weight: bold;
   position: relative;
   color: #054d55 !important;
+  font-size:15px;c
 }
 
 .Navbartext:hover {
@@ -108,7 +109,7 @@ button:focus {
 
 .MenuTitle {
   color:#054D55;
-  font-size:18px;
+  font-size:15px;
   font-weight:bold;
   font-family:'Roboto';
   padding: 1px 0px 1px 7px;
@@ -119,7 +120,7 @@ button:focus {
   color: #fff;
   border-radius: 17px;
   padding:1px 0px 1px 7px;
-  font-size:18px;
+  font-size:15px;
   font-weight:bold;
   font-family:'Roboto';
 }
