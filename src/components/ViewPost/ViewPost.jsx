@@ -3,8 +3,8 @@ import classes from './ViewPost.module.css'
 import MidsomerImage from '../../assets/images/c4.png'
 import SocialIcons from '../SocialIcons/SocialIcons'
 
-import { Container, Row, Col } from 'reactstrap';
-import LatestPosts from '../LatestPosts/LatestPosts';
+import { Container, Row, Col } from 'react-bootstrap';
+import LatestPosts from '../landing/LatestPosts/LatestPosts';
 
 
 function ViewPost() {

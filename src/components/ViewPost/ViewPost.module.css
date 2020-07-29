@@ -9,7 +9,7 @@
 
 
 .PostImage1 img {
-    width: 39rem;
+    width: 100%;
     height: auto;
     position: relative;
 }
@@ -63,13 +63,13 @@ color:#626262;
         }
 
 .PostImage2 img {
-    width:30rem;
-    height: auto;
+    width:90%;
+    
 }
 
 .PostImage3 img {
-    width:30rem;
-    height: auto;
+    width:90%;
+   
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -97,3 +97,16 @@ margin-right: 15rem;
 }
 
 
+/* @media only screen and (max-width: 1150px) {
+
+    .PostImage1 img {
+        width: 32rem;
+    }
+    }
+
+    @media only screen and (max-width: 1125px) {
+
+        .PostImage1 img {
+            width: 20rem;
+        }
+        } */

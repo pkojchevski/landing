@@ -9,10 +9,8 @@ import Social from '../../assets/images/social_text.png';
 import { useHistory } from "react-router-dom";
 import {
   Navbar,
-  NavbarToggler,
   NavbarBrand,
   Nav,
-  UncontrolledDropdown,
   Dropdown,
   DropdownToggle,
   DropdownMenu,
@@ -22,16 +20,12 @@ import {
 
 import SearchBox from "./SearchBox/SearchBox";
 import SocialIcons from "../SocialIcons/SocialIcons";
-import DestinationsMenuImages from "../DestinationsMenuImages/DestinationsMenuImages";
+import DestinationsMenuImages from "../landing/DestinationsMenuImages/DestinationsMenuImages";
+import { Link } from 'react-router-dom'
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false);
   const [isDestinationsOpen, setDestinationsIsOpen] = useState(false);
   const [isTopicsOpen, setTopicsIsOpen] = useState(false);
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
 
 
   const topicsToggle = () => {
@@ -51,6 +45,7 @@ function Header() {
   return (
     <div className={classes.Header}>
       <Navbar
+        className={classes.Move}
         expand="md"
         style={{
           paddingLeft: "2rem",
@@ -62,12 +57,11 @@ function Header() {
         <NavbarBrand href="/">
           <FaHome style={{ color: "#054D55", marginTop: "-4px" }} />
         </NavbarBrand>
-        {/* <NavbarToggler onClick={toggle} /> */}
         <Nav className="mr-auto" navbar>
           <Dropdown nav inNavbar isOpen={isDestinationsOpen} toggle={destinationsToggle}>
             <DropdownToggle
               nav
-              style={{ color: "#054D55", marginLeft: "3rem" }}
+              className={classes.Toggle}
             >
               {isDestinationsOpen ? (
                 <div className={classes.MenuTitleOpen}
@@ -179,46 +173,53 @@ function Header() {
                   backgroundColor: "rgba(255, 255,255,0.88)",
                 }}
               >
-                <div
-                  className={classes.TopicMenuItemEnvironmental}
-                  style={{ height: "70px" }}
-                >
-                  <img src={Environmental} />
-                </div>
+                <Link to="/environment">
+                  <div
+                    className={classes.TopicMenuItemEnvironmental}
+                    style={{ height: "70px" }}
+                  >
+                    <img src={Environmental} />
+                  </div>
+                </Link>
               </DropdownItem>
               <DropdownItem
                 style={{
                   backgroundColor: "rgba(255, 255,255,0.75)",
                 }}
               >
-                <div
-                  className={classes.TopicMenuItemSocial}
-                  style={{ height: "120px" }}
-                >
-                  <img src={Social} />
-                </div>
+                <Link to="/social">
+                  <div
+                    className={classes.TopicMenuItemSocial}
+                    style={{ height: "120px" }}
+                  >
+                    <img src={Social} />
+                  </div>
+                </Link>
               </DropdownItem>
               <DropdownItem
                 style={{
                   backgroundColor: "rgba(255, 255,255,0.67)",
                 }}
               >
-                <div
-                  className={classes.TopicMenuItemCultural}
-                  style={{
-                    height: "60px", alignItems: 'flex-end',
-                    marginTop: ".5rem",
-                    marginBottom: "-.5rem"
-                  }}
-                >
-                  <img src={Cultural} />
-                </div>
+                <Link to="/cultural">
+                  <div
+                    className={classes.TopicMenuItemCultural}
+                    style={{
+                      height: "60px", alignItems: 'flex-end',
+                      marginTop: ".5rem",
+                      marginBottom: "-.5rem"
+                    }}
+                  >
+                    <img src={Cultural} />
+                  </div>
+                </Link>
               </DropdownItem>
               <DropdownItem
                 style={{
                   backgroundColor: "rgba(255, 255,255,0.52)",
                 }}
               >
+
                 <div
                   className={classes.TopicMenuItem}
                   style={{ height: "30px" }}
