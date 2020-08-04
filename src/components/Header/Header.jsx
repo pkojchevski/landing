@@ -125,16 +125,6 @@ function Header() {
                   <p className={classes.DestinationsText}>Restaurants</p>
                 </div>
               </DropdownItem>
-              <DropdownItem
-                style={{
-                  backgroundColor: "rgba(255, 255,255,0.52)",
-                }}
-              >
-                <div
-                  className={classes.DestinationsMenuItem}
-                  style={{ height: "30px" }}
-                ></div>
-              </DropdownItem>
             </DropdownMenu>
           </Dropdown>
           <Dropdown inNavbar isOpen={isTopicsOpen} toggle={topicsToggle}>
@@ -214,17 +204,7 @@ function Header() {
                   </div>
                 </Link>
               </DropdownItem>
-              <DropdownItem
-                style={{
-                  backgroundColor: "rgba(255, 255,255,0.52)",
-                }}
-              >
 
-                <div
-                  className={classes.TopicMenuItem}
-                  style={{ height: "30px" }}
-                ></div>
-              </DropdownItem>
             </DropdownMenu>
           </Dropdown>
           <NavbarText>
