@@ -9,10 +9,12 @@ import LatestsPosts from "../LatestPosts/LatestPosts";
 import { fetchPosts } from '../../../store/actions/posts.actions';
 import { useHistory } from "react-router-dom";
 
-function Content({ posts, getPosts, loading }) {
+
+function Content({posts, getPosts, loading }) {
 
   useEffect(() => {
     getPosts();
+    // addPosts(POSTS)
   }, [])
 
   const history = useHistory();
@@ -20,6 +22,7 @@ function Content({ posts, getPosts, loading }) {
     history.push("/post");
   };
 
+  console.log(posts)
   const [latestsPosts, setLatestsPosts] = useState([
     {
       imgUrl: "./images/1.png",

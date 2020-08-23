@@ -1,5 +1,6 @@
 import * as actionTypes from "./actionTypes";
-import axios from "../../axios-posts";
+// import axios from "../../axios-posts";
+import { POSTS } from '../../posts'
 
 export const fetchPostsSuccess = posts => ({
     type: actionTypes.FETCH_POSTS_SUCCESS,
@@ -17,11 +18,12 @@ export const fetchPostsStart = () => ({
 
 export const fetchPosts = () => dispatch => {
     dispatch(fetchPostsStart());
-    axios.get("/posts")
-        .then(posts => {
-            console.log('posts:', posts.data)
-            return dispatch(fetchPostsSuccess(posts.data));
-        }
-        )
-        .catch(err => dispatch(fetchPostsFail(err)));
+    return dispatch(fetchPostsSuccess(POSTS));
+    // axios.get("/posts")
+    //     .then(posts => {
+    //         console.log('posts:', posts.data)
+    //         return dispatch(fetchPostsSuccess(posts.data));
+    //     }
+    //     )
+        // .catch(err => dispatch(fetchPostsFail(err)));
 };

@@ -16,8 +16,8 @@ function FeaturedTopic() {
   return (
     <div className={classes.Featured}>
       {featuredTopics.map((featured, index) => (
-        <Link to={`/${featured.title.toLowerCase()}`}>
-          <FeaturedTopicImage key={index} featured={featured} />
+        <Link key={index} to={`/${featured.title.toLowerCase()}`}>
+          <FeaturedTopicImage  featured={featured} />
         </Link>
       ))}
     </div>

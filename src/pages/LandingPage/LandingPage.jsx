@@ -6,7 +6,6 @@ import Content from '../../components/landing/Content/Content'
 export default function LandingPage() {
     return (
         <Fragment>
-
             <Content />
         </Fragment>
     )
